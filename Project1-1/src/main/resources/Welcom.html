@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Hello, welcome to Personal Finance Management System!</h1>
+    <form action="/createUser" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="initialIncome">Initial Income:</label>
+        <input type="number" id="initialIncome" name="initialIncome" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
