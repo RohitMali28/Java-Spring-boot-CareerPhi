@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Your Notifications</title>
+</head>
+<body>
+    <h1>Your Notifications</h1>
+
+    <ul>
+        <li th:each="notification : ${notifications}">
+            <p th:text="${notification.message}"></p>
+            <small th:text="${notification.timestamp}"></small>
+        </li>
+    </ul>
+
+    <a href="/">Go Back</a>
+</body>
+</html>

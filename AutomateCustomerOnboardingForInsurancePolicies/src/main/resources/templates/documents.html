@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload Additional Documents</title>
+</head>
+<body>
+    <h1>Upload Additional Documents</h1>
+
+    <form th:action="@{/documents/upload}" method="post" enctype="multipart/form-data">
+        <label>User ID:</label>
+        <input type="text" name="userId" required/>
+
+        <label>Document Type:</label>
+        <input type="text" name="documentType" required placeholder="e.g., Medical Report"/>
+
+        <label>Upload Document:</label>
+        <input type="file" name="file" accept="image/*,application/pdf,.doc,.docx" required/>
+
+        <button type="submit">Submit for Review</button>
+    </form>
+
+    <div th:if="${successMessage}">
+        <p th:text="${successMessage}"></p>
+    </div>
+    <div th:if="${errorMessage}">
+        <p style="color:red;" th:text="${errorMessage}"></p>
+    </div>
+</body>
+</html>
