@@ -1,12 +1,12 @@
-package TaskService.java;
+package com.example.demo.TaskService.java;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import Task.java.Task;
-import TaskRepository.java.TaskRepository;
+import com.example.demo.Task.java.Task;
+import com.example.demo.TaskRepository.java.TaskRepository;
 
 @Service
 public class TaskService {

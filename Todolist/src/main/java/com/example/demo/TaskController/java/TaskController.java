@@ -1,4 +1,4 @@
-package TaskController.java;
+package com.example.demo.TaskController.java;
 
 import java.util.List;
 
@@ -12,37 +12,37 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import Task.java.Task;
-import TaskService.java.TaskService;
+import com.example.demo.Task.java.Task;
+import com.example.demo.TaskService.java.TaskService;
 
 @RestController
-@RequestMapping("/api/tasks")
+@RequestMapping("/api")
 public class TaskController {
     @Autowired
     private TaskService taskService;
     
-    @PostMapping
+    @PostMapping("tasks")
     public Task createTask(@RequestBody Task task) {
         return taskService.createTask(task);
     }
     
-    @GetMapping
+    @GetMapping("tasks")
     public List<Task> getAllTasks() {
         return taskService.getAllTasks();
     }
     
-    @GetMapping("/{id}")
+    @GetMapping("tasks/{id}")
     public Task getTask(@PathVariable Long id) {
         return taskService.getTask(id);
     }
     
-    @PutMapping("/{id}")
+    @PutMapping("tasks/{id}")
     public Task updateTask(@PathVariable Long id, @RequestBody Task task) {
         task.setId(id);
         return taskService.updateTask(task);
     }
     
-    @DeleteMapping("/{id}")
+    @DeleteMapping("tasks/{id}")
     public void deleteTask(@PathVariable Long id) {
         taskService.deleteTask(id);
     }
