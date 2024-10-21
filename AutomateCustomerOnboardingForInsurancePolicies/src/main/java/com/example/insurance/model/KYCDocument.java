@@ -8,7 +8,12 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class KYCDocument {
-    @Id
+    public KYCDocument() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

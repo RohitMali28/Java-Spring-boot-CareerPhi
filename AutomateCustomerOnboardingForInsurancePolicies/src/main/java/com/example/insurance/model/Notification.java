@@ -9,7 +9,11 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Notification {
-    @Id
+    public Notification() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
